@@ -139,7 +139,18 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-          We present a method for generating a simplicial (e.g., triangular or tetrahedral) grid to enable adaptive discretization of implicit shapes defined by a vector function. Such shapes, which we call implicit complexes, are generalizations of implicit surfaces and useful for representing non-smooth and non-manifold structures. While adaptive grid generation has been extensively studied for polygonizing implicit surfaces, few methods are designed for implicit complexes. Our method can generate adaptive grids for several implicit complexes, including arrangements of implicit surfaces, CSG shapes, material interfaces, and curve networks. Importantly, our method adapts the grid to the geometry of not only the implicit surfaces but also their lower-dimensional intersections. We demonstrate how our method enables efficient and detail-preserving discretization of non-trivial implicit shapes.
+            Surface reconstruction from points is a fundamental problem in computer
+            graphics. While numerous methods have been proposed, it remains challenging
+            to reconstruct from sparse and non-uniform point distributions,
+            particularly when normals are absent. We present a robust and scalable
+            method for reconstructing an implicit surface from points without normals.
+            By exploring the locality of natural neighborhoods, we propose local reformulations
+            of a previous global method, known for its ability to surface
+            sparse points but high computational cost, thereby significantly improving
+            its scalability while retaining its robustness. Our method involves a single
+            parameter, requires no discretization, and achieves comparable speed
+            as existing reconstruction methods on large inputs while producing fewer
+            artifacts in under-sampled regions.
           </p>
         </div>
       </div>
