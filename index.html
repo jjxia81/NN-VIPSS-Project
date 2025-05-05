@@ -122,9 +122,11 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-        <img src="static/images/fig-teaser.png" alt="Simplicial Grids Illustration" style="width: 150%; height: auto;">
+        <img src="static/images/helmet.png" alt="Simplicial Grids Illustration" style="width: 150%; height: auto;">
       <h2 class="subtitle has-text-centered">
-          Our method generates simplicial grids (top) that enable adaptive discretization of a variety of implicit shapes defined by vector functions (bottom), such as arrangements of multiple implicit surfaces (a), CSG shapes (b), non-manifold material interfaces (e), and curve networks (d). The grids are adapted to the geometric complexity of not only the surface components but also their intersections (shown as wires on top).
+        Given a point cloud without normals (a) that sparsely samples a thin Helmet (from [Laric 2012], 100K samples), the state-of-the-art normal estimation
+        method [Lin et al. 2024] results in a “holy” helmet (b), while the latest learning-based reconstruction method [Erler et al. 2024] smears the facial features (c).
+        Our method (NN-VIPSS) closely approximates the ground truth (e). Close-up views show a cross-section of the surface.
       </h2>
     </div>
   </div>
