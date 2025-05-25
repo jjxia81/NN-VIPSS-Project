@@ -168,45 +168,54 @@
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- Your image here -->
-        <img src="static/images/fig-torus-cylinder.png" alt="MY ALT TEXT"/>
+        <img src="static/images/2d_interpolant.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-           
+          Comparing 2D Hermite interpolation using Duchon’s interpolant (a), our NND (b), Sibson’s 𝐶1 coordinates [Sibson 1981] (c), Farin’s 𝐶1 coordinates
+          [Farin 1990] (d), method of [Boissonnat and Cazals 2002] (e), and HRBF with a compactly supported kernel (f). Each function is visualized by colors with
+          contours (top, thick curve is zero contour) and the height surface (bottom).
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/fig-tori-rand.png" alt="MY ALT TEXT"/>
+        <img src="static/images/sparse_result.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-            
+          Comparing the normals and surfaces produced by various methods on sparse samples of 3D shapes (Tori and Bathtub taken from [Huang et al. 2019]
+          and Chair from [Huang et al. 2024]). Points are colored by normal differences with ground truth, and surfaces are colored by per-vertex distances to the
+          original shape (red for distances greater than 0.15). NN-VIPSS uses 𝜆 = 0. WNNC level is 0 for Torus 1 and Chair, and 5 for Torus 2 and Bathtub. All surfaces
+          are produced by NND.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/fig-key.png" alt="MY ALT TEXT"/>
+        <img src="static/images/wires_result.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-            Comparing the implicit surface of an SDF extracted on our adaptively
-            refined grid (𝜖 = 0.0005) and on a uniform tetrahedral grid (tessellation
-            of a 1003 cubic grid). The SDF is created by Shadertoy user Flopine [2020],
-            released under CC BY-NC-SA 3.0 License.
+          Comparing the normals and surfaces produced by various methods on curve samples (taken from [Huang et al. 2019]). Points are colored by normal
+          differences with VIPSS, and surfaces are colored by distances to the VIPSS surface (red for distances greater than 0.15). NN-VIPSS uses 𝜆 = 0 except Walrus
+          where 𝜆 = 0.0005, and WNNC level is 5. GCNO did not terminate on Torus Wire after running for 30 minutes. All surfaces are produced by NND interpolation
+          except Walrus, where VIPSS and NN-VIPSS use NND and other methods use SPR [Kazhdan and Hoppe 2013].
        </h2>
      </div>
      <div class="item">
       <!-- Your image here -->
-      <img src="static/images/fig-uniform.png" alt="MY ALT TEXT"/>
+      <img src="static/images/large_result.png" alt="MY ALT TEXT"/>
       <h2 class="subtitle has-text-centered">
-          Comparing the implicit surfaces of a Hermite RBF function with
-          1000 sites (left) extracted on a uniform tetrahedral grid (tessellation of a
-          1003 cubic grid) and on our adaptively refined grid (𝜖 = 0.00125).
+        Comparing the normals and surfaces produced by various methods on points sampled from 3D shapes (Helmet 2 from [Laric 2012] and Mobius from
+        [Lin et al. 2024]). Points are colored by normal differences with ground truth and surfaces are colored by distances to ground truth (red for distances greater
+        than 0.02). NN-VIPSS uses 𝜆 = 0. WNNC level is 0 for Brain and Mobius and 1 for Helmet 2. All surfaces are produced by NND interpolation. Genus is noted
+        (𝑔) for Mobius ground truth and reconstructions.
       </h2>
     </div>
      <div class="item">
       <!-- Your image here -->
-      <img src="static/images/fig-doghead.png" alt="MY ALT TEXT"/>
+      <img src="static/images/berger_result.png" alt="MY ALT TEXT"/>
       <h2 class="subtitle has-text-centered">
-          The result of subtraction (a) or addition (b) between two
-          slightly shifted dog head surfaces (each defined by an Hermite RBF function),
-          discretized on our adaptively refined grid. (c,d): Comparing discretizations
-          with or without adaptive refinement for the intersection curves.
+        Comparing our method (𝜆 = 0.0002 for Lord and 0.001 for Anchor)
+with WNNC (using level 1 and surfaced by SPR) and SPR (using normals
+provided in the input) on incomplete and noisy scans from [Berger et al.
+2017]. Surfaces are colored by distances to ground truth dense scans (red
+for distances greater than 0.04 for Lord and 0.1 for Anchor). Points (left)
+are shaded using the provided normals (not used for reconstruction by
+NN-VIPSS or WNNC).
       </h2>
     </div>
   </div>
